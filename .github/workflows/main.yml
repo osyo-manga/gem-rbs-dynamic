@@ -1,11 +1,6 @@
 name: Ruby
 
-on:
-  push:
-    branches:
-      - master
-
-  pull_request:
+on: [push, pull_request]
 
 jobs:
   build:
@@ -13,12 +8,11 @@ jobs:
     name: Ruby ${{ matrix.ruby }}
     strategy:
       matrix:
-        ruby:
-          - '3.1.2'
+        ruby: [2.6.9, 2.7.6, 3.0.4, 3.1.2]
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Ruby
+    - name: Set up Ruby ${{ matrix.ruby-version }}
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
