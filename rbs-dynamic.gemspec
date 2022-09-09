@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary = "dynamic rbs generator"
   spec.description = "dynamic rbs generator"
   spec.homepage = "https://github.com/osyo-manga/gem-rbs-dynamic"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.required_ruby_version = ">= 2.7.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/osyo-manga/gem-rbs-dynamic"
