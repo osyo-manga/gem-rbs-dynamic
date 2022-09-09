@@ -339,10 +339,18 @@ RSpec.describe RBS::Dynamic do
           DynamicX.new.func($type1)
         } }
 
-        it do
-          is_expected.to include <<~EOS
-            def func: (*Array[untyped], **Hash[untyped, untyped]) -> NilClass
-          EOS
+        if RUBY_VERSION < "3.1.0"
+          it do
+            is_expected.to include <<~EOS
+              def func: (*Array[untyped]) -> NilClass
+            EOS
+          end
+        else
+          it do
+            is_expected.to include <<~EOS
+              def func: (*Array[untyped], **Hash[untyped, untyped]) -> NilClass
+            EOS
+          end
         end
       end
 

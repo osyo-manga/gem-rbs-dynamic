@@ -16,6 +16,10 @@ module RBS module Dynamic module Converter
       end
 
       refine Hash do
+        def except(*keys)
+          slice(*self.keys - keys)
+        end unless method_defined?(:except)
+
         def value_to_type
           merge(type: self[:value] || self[:type]).except(:value)
         end
