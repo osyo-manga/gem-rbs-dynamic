@@ -1,3 +1,5 @@
+[![Ruby](https://github.com/osyo-manga/gem-rbs-dynamic/actions/workflows/main.yml/badge.svg)](https://github.com/osyo-manga/gem-rbs-dynamic/actions/workflows/main.yml)
+
 # RBS::Dynamic
 
 `RBS::Dynamic` is a tool to dynamically analyze Ruby code and generate RBS
