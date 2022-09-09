@@ -6,7 +6,7 @@ module RBS module Dynamic
   class CLI < Thor
     desc "version", "show version"
     def version
-      "rbs dynamic version #{RBS::Dynamic::VERSION}"
+      puts "rbs dynamic version #{RBS::Dynamic::VERSION}"
     end
 
     desc "trace [filename]", ""
