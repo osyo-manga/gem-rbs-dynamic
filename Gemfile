@@ -8,11 +8,3 @@ gemspec
 gem "rake", "~> 13.0"
 
 gem "rspec", "~> 3.0"
-
-gem "timeout", "0.3.0"
-gem "sorted_set"
-gem 'listen'
-gem "rails", "6.1.0"
-gem "sqlite3"
-gem "sinatra"
-gem "webrick"
